@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-s
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      tier: front
+
+  template:
+        metadata:
+            labels:
+               tier: front
+        spec:
+            containers:
+                 - name: c1
+                   image: httpd    
+
+

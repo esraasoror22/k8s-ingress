@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: serviceyu
+spec:
+  type: ClusterIP
+  selector:
+    tier: front-ty
+  ports:
+    - port: 8080

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-y
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      tier: front-end
+  template:
+        metadata:
+            labels:
+               tier: front-end
+        spec:
+            containers:
+                 - name: c2
+                   image: gcr.io/google-samples/hello-app:1.0
+
+                     #image: grc.io/google-samples/hello-app:1.0    
